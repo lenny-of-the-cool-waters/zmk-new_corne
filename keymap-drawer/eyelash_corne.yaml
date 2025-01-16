@@ -46,7 +46,7 @@ layers:
   - {t: HOME, h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: END, h: SYMBOL}
+  - {t: END, h: FN_NUMPAD}
   - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-option$$'}
   NUMBER:
   - {t: '`', s: '~'}
@@ -97,14 +97,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  FN_NUMPAD:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - F1
   - F2
   - F3
   - F4
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-up-bold$$
   - '0'
   - '1'
   - '2'
@@ -117,9 +117,9 @@ layers:
   - F6
   - F7
   - F8
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-right-bold$$
   - {t: ',', s: <}
   - '4'
   - {t: '5', s: '%'}
@@ -133,7 +133,7 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-down-bold$$
   - .
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
