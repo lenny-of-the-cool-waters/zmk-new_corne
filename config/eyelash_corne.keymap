@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -56,7 +57,7 @@
             bindings = <
 &mt LC(LA(DEL)) ESCAPE  &kp Q  &kp W  &kp E     &kp R       &kp T                                               &mmv MOVE_UP                     &kp Y                 &kp U      &kp I                   &kp O    &kp P     &kp BSPC
 &mt LEFT_ALT TAB        &kp A  &kp S  &kp D     &kp F       &kp G                               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H                 &kp J      &kp K                   &kp L    &kp SEMI  &mt RIGHT_ALT SQT
-&kp LCTRL               &kp Z  &kp X  &kp C     &kp V       &kp B                 &kp K_MUTE                    &mmv MOVE_DOWN                   &kp N                 &kp M      &kp COMMA               &kp DOT  &kp FSLH  &kp DEL
+&kp LCTRL               &kp Z  &kp X  &kp C     &kp V       &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N                 &kp M      &kp COMMA               &kp DOT  &kp FSLH  &kp DEL
                                       &kp LGUI  &lt 1 HOME  &mt LEFT_SHIFT ENTER                                                                 &mt LEFT_SHIFT SPACE  &lt 2 END  &mt RIGHT_ALT CAPSLOCK
             >;
 
@@ -66,10 +67,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE        &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                              &mmv MOVE_UP                     &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp BSPC
-&kp PRINTSCREEN  &kp LA(F4)     &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &kp PG_UP
-&kp LC(LA(DEL))  &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp PG_DN
-                                              &trans        &trans        &trans                                                                               &trans                 &trans     &trans
+&kp GRAVE        &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                        &kp UP_ARROW             &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp BSPC
+&kp PRINTSCREEN  &kp LA(F4)     &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &kp LEFT  &mkp RCLK     &kp RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &kp PG_UP
+&kp LC(LA(DEL))  &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE              &kp DOWN                 &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp PG_DN
+                                              &trans        &trans        &trans                                                                 &trans                 &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DEC>;
@@ -78,13 +79,22 @@
         raise_layer {
             display-name = "FN_NUMPAD";
             bindings = <
-&trans  &kp EXCL      &kp F1  &kp F2   &kp F3   &kp F4                               &kp UP_ARROW             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
-&trans  &bt BT_CLR    &kp F5  &kp F6   &kp F7   &kp F8               &kp LEFT_ARROW  &mkp RCLK     &kp RIGHT  &kp COMMA     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &kp LEFT_ALT
-&trans  &out OUT_USB  &kp F9  &kp F10  &kp F11  &kp F12    &trans                    &kp DOWN                 &kp PERIOD    &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
-                              &trans   &trans   &kp SPACE                                                     &kp RET       &trans        &trans
+&rgb_ug RGB_TOG  &kp EXCL      &kp F1  &kp F2   &kp F3             &kp F4                               &msc SCRL_UP                     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
+&rgb_ug RGB_EFF  &bt BT_CLR    &kp F5  &kp F6   &kp F7             &kp F8               &msc SCRL_LEFT  &mkp RCLK       &mmv MOVE_RIGHT  &kp COMMA     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &kp LEFT_ALT
+&trans           &out OUT_USB  &kp F9  &kp F10  &kp F11            &kp F12    &trans                    &msc SCRL_DOWN                   &kp PERIOD    &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
+                                       &trans   &lt 3 RIGHT_SHIFT  &kp SPACE                                                             &kp RET       &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        RGB {
+            bindings = <
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none  &none  &none                  &none         &none  &none  &none  &none  &bl BL_CYCLE  &bl BL_TOG
+&rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none         &bl BL_INC
+&rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none         &bl BL_DEC
+                                                   &none  &none  &none                                &none  &none  &none
+            >;
         };
     };
 };
