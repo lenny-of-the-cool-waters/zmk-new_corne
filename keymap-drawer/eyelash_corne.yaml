@@ -96,7 +96,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: FN_NUMPAD, h: toggle}
   FN_NUMPAD:
   - {t: RGB, h: toggle}
   - '!'
@@ -111,8 +111,8 @@ layers:
   - '3'
   - +
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: FN_NUMPAD, h: toggle}
-  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F5
   - F6
   - F7
@@ -125,9 +125,9 @@ layers:
   - {t: '5', s: '%'}
   - '6'
   - {t: '-', s: _}
-  - {t: FN_NUMPAD, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - OUT USB
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F9
   - F10
   - F11
