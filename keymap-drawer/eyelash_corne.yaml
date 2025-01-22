@@ -55,7 +55,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:arrow-up-bold$$
+  - $$mdi:pan-up$$
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -68,9 +68,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '-', s: _}
   - (
-  - $$mdi:arrow-left-bold$$
+  - $$mdi:pan-left$$
   - $$mdi:mouse-right-click-outline$$
-  - $$mdi:arrow-right-bold$$
+  - $$mdi:pan-right$$
   - )
   - {t: '=', s: +}
   - $$mdi:arrow-up-bold$$
@@ -84,7 +84,7 @@ layers:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {t: '[', s: '{'}
   - $$mdi:volume-off$$
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:pan-down$$
   - {t: ']', s: '}'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -98,29 +98,29 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   FN_NUMPAD:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: RGB, h: toggle}
   - '!'
   - F1
   - F2
   - F3
   - F4
-  - $$mdi:pan-up$$
+  - $$mdi:arrow-up-bold$$
   - '0'
   - '1'
   - '2'
   - '3'
   - +
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: RGB, h: toggle}
+  - {t: FN_NUMPAD, h: toggle}
   - $$mdi:bluetooth-off$$
   - F5
   - F6
   - F7
   - F8
-  - $$mdi:pan-left$$
-  - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: ',', s: <}
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - .
   - '4'
   - {t: '5', s: '%'}
   - '6'
@@ -133,21 +133,21 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-down$$
-  - .
+  - $$mdi:arrow-down-bold$$
+  - {t: ',', s: <}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '=', s: +}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: RGB}
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   RGB:
-  - RGB TOG
+  - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
   - RGB EFR
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -190,8 +190,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
