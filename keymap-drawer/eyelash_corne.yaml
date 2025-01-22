@@ -98,7 +98,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   FN_NUMPAD:
-  - RGB TOG
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
   - F1
   - F2
@@ -111,7 +111,7 @@ layers:
   - '3'
   - +
   - {t: '$$mdi:backspace$$', type: backspace}
-  - RGB EFF
+  - {t: RGB, h: toggle}
   - $$mdi:bluetooth-off$$
   - F5
   - F6
@@ -125,7 +125,7 @@ layers:
   - {t: '5', s: '%'}
   - '6'
   - {t: '-', s: _}
-  - $$mdi:apple-keyboard-option$$
+  - {t: FN_NUMPAD, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - OUT USB
   - F9
@@ -181,7 +181,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB TOG
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
