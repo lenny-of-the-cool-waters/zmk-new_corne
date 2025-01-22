@@ -77,10 +77,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE        &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                        &kp UP_ARROW             &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp BSPC
-&kp PRINTSCREEN  &kp LA(F4)     &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &kp LEFT  &mkp RCLK     &kp RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &kp PG_UP
-&kp LC(LA(DEL))  &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE              &kp DOWN                 &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp PG_DN
-                                              &trans        &trans        &trans                                                                 &trans                 &trans     &trans
+&kp GRAVE        &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                              &msc SCRL_UP                     &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp BSPC
+&kp PRINTSCREEN  &kp LA(F4)     &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &msc SCRL_LEFT  &mkp RCLK       &msc SCRL_RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &kp PG_UP
+&kp LC(LA(DEL))  &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE                    &msc SCRL_DOWN                   &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp PG_DN
+                                              &trans        &trans        &trans                                                                               &trans                 &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DEC>;
@@ -89,21 +89,21 @@
         raise_layer {
             display-name = "FN_NUMPAD";
             bindings = <
-&none   &kp EXCL      &kp F1  &kp F2   &kp F3             &kp F4                               &msc SCRL_UP                     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
-&tog 3  &bt BT_CLR    &kp F5  &kp F6   &kp F7             &kp F8               &msc SCRL_LEFT  &mkp RCLK       &mmv MOVE_RIGHT  &kp COMMA     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &tog 2
-&trans  &out OUT_USB  &kp F9  &kp F10  &kp F11            &kp F12    &trans                    &msc SCRL_DOWN                   &kp PERIOD    &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
-                              &trans   &lt 3 RIGHT_SHIFT  &kp SPACE                                                             &kp RET       &trans        &trans
+&tog 3  &kp EXCL      &kp F1  &kp F2   &kp F3   &kp F4                       &kp UP_ARROW             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
+&tog 2  &bt BT_CLR    &kp F5  &kp F6   &kp F7   &kp F8             &kp LEFT  &kp ENTER     &kp RIGHT  &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &tog 2
+&trans  &out OUT_USB  &kp F9  &kp F10  &kp F11  &kp F12  &trans              &kp DOWN                 &kp COMMA     &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
+                              &trans   &trans   &trans                                                &trans        &trans        &trans
             >;
 
-            sensor-bindings = <&rgb_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         RGB {
             bindings = <
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none  &none  &none                            &none          &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans           &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none  &none  &none                            &none          &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &none  &none  &none                     &none  &trans  &none  &bt BT_CLR  &none         &none         &none         &none         &none
 &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &none  &none  &none  &rgb_ug RGB_TOG           &none          &none       &none         &none         &none         &none         &none
-                                                   &none  &none  &none                                           &none       &none         &none
+                                                   &none  &none  &none                                           &none       &trans        &none
             >;
 
             sensor-bindings = <&rgb_encoder>;
