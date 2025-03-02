@@ -74,8 +74,8 @@ layers:
   - H
   - J
   - K
-  - K
   - L
+  - {t: ;, s: ':'}
   - {t: '''', h: '$$mdi:apple-keyboard-option$$', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
