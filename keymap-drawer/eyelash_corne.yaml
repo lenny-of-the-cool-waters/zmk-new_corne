@@ -72,10 +72,10 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
   - {t: '''', h: '$$mdi:apple-keyboard-option$$', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
