@@ -77,7 +77,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', h: '$$mdi:apple-keyboard-option$$', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-command$$
   - Z
   - X
   - C
@@ -91,12 +91,12 @@ layers:
   - .
   - {t: /, s: '?'}
   - {t: 'Gui+$$mdi:backspace$$', type: backspace}
-  - $$mdi:apple-keyboard-command$$
+  - '&ctrl_pd'
   - {t: HOME, h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: END, h: FN_NUMPAD}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-option$$'}
+  - '&caps_ichigo'
   NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
