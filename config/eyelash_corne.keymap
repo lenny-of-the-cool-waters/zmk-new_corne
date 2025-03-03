@@ -69,6 +69,43 @@
         bindings = <&kp ESCAPE>, <&kp LG(W)>;
     };
 
+    ctrl_pd: ctrl_pd {
+        compatible = "zmk,behavior-tap-dance";
+        label = "CTRL_PD";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_CONTROL>, <&pd>;
+    };
+
+    caps_ichigo: caps_ichigo {
+        compatible = "zmk,behavior-tap-dance";
+        label = "CAPS_ICHIGO";
+        #binding-cells = <0>;
+        bindings = <&kp CAPS>, <&ichigo>;
+    };
+
+    macros {
+        mac_delete: mac_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT &kp DELETE>;
+            label = "MAC_DELETE";
+        };
+
+        pd: pd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(D) &kp O &kp C &kp E &kp N &kp D &kp O &kp N2 &kp M &kp A &kp S>;
+            label = "PD";
+        };
+
+        ichigo: ichigo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(G) &kp E &kp T &kp S &kp U &kp G &kp A &kp N1 &kp N0 &kp S &kp H &kp O &kp W>;
+            label = "ICHIGO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,10 +123,10 @@
 
         MAC {
             bindings = <
-&escape_close_window  &kp Q  &kp W  &kp E         &kp R       &kp T                                               &mmv MOVE_UP                     &kp Y                  &kp U      &kp I                   &kp O       &kp P          &kp BACKSPACE
-&kp TAB               &kp A  &kp S  &kp D         &kp F       &kp G                               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H                  &kp J      &kp K                   &kp L       &kp SEMICOLON  &mt LEFT_ALT SQT
-&kp LEFT_CONTROL      &kp Z  &kp X  &kp C         &kp V       &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N                  &kp M      &kp COMMA               &kp PERIOD  &kp SLASH      &kp LG(BACKSPACE)
-                                    &kp LEFT_GUI  &lt 2 HOME  &mt LEFT_SHIFT ENTER                                                                 &mt RIGHT_SHIFT SPACE  &lt 3 END  &mt RIGHT_ALT CAPSLOCK
+&escape_close_window  &kp Q  &kp W  &kp E     &kp R       &kp T                                               &mmv MOVE_UP                     &kp Y                  &kp U      &kp I         &kp O       &kp P          &kp BACKSPACE
+&kp TAB               &kp A  &kp S  &kp D     &kp F       &kp G                               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H                  &kp J      &kp K         &kp L       &kp SEMICOLON  &mt LEFT_ALT SQT
+&kp LEFT_COMMAND      &kp Z  &kp X  &kp C     &kp V       &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N                  &kp M      &kp COMMA     &kp PERIOD  &kp SLASH      &kp LG(BACKSPACE)
+                                    &ctrl_pd  &lt 2 HOME  &mt LEFT_SHIFT ENTER                                                                 &mt RIGHT_SHIFT SPACE  &lt 3 END  &caps_ichigo
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
