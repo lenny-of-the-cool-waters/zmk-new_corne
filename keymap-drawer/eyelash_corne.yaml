@@ -43,10 +43,10 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
   - LGUI
-  - {t: HOME, h: NUMBER}
+  - {t: HOME, h: SYMBOL}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: END, h: FN_NUMPAD}
+  - {t: END, h: NUMPAD}
   - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-option$$'}
   MAC:
   - '&escape_close_window'
@@ -90,14 +90,14 @@ layers:
   - {t: ',', s: <}
   - .
   - {t: /, s: '?'}
-  - {t: 'Gui+$$mdi:backspace$$', type: backspace}
+  - '&mac_delete'
   - '&ctrl_pd'
-  - {t: HOME, h: NUMBER}
+  - {t: HOME, h: SYMBOL}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: END, h: FN_NUMPAD}
+  - {t: END, h: NUMPAD}
   - '&caps_ichigo'
-  NUMBER:
+  SYMBOL:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -125,7 +125,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: FN_NUMPAD, h: toggle}
+  - {t: NUMPAD, h: toggle}
   - Ctl+Alt+$$mdi:backspace-reverse-outline$$
   - Ctl+Sft+Y
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -145,8 +145,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: FN_NUMPAD, h: toggle}
-  FN_NUMPAD:
+  - {t: NUMPAD, h: toggle}
+  NUMPAD:
   - {t: RGB, h: toggle}
   - '!'
   - F1
