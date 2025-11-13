@@ -21,7 +21,7 @@ layers:
   - F
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:mouse-left-click-outline$$', h: '&soft_off'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
   - J
@@ -70,7 +70,7 @@ layers:
   - F
   - G
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:mouse-left-click-outline$$', h: '&soft_off'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - H
   - J
