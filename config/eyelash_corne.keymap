@@ -138,10 +138,10 @@
 
         MAC {
             bindings = <
-&escape_close_window  &kp Q  &kp W  &kp E     &kp R       &kp T                                               &mmv MOVE_UP                            &kp Y                  &kp U      &kp I         &kp O       &kp P          &kp BACKSPACE
-&kp TAB               &kp A  &kp S  &kp D     &kp F       &kp G                               &mmv MOVE_LEFT  &mouse_and_off 0 LCLK  &mmv MOVE_RIGHT  &kp H                  &kp J      &kp K         &kp L       &kp SEMICOLON  &mt LEFT_ALT SQT
-&kp LEFT_COMMAND      &kp Z  &kp X  &kp C     &kp V       &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                          &kp N                  &kp M      &kp COMMA     &kp PERIOD  &kp SLASH      &mac_delete
-                                    &ctrl_pd  &lt 2 HOME  &mt LEFT_SHIFT ENTER                                                                        &mt RIGHT_SHIFT SPACE  &lt 3 END  &caps_ichigo
+&escape_close_window  &kp Q  &kp W  &kp E     &kp R        &kp T                                               &mmv MOVE_UP                            &kp Y                  &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
+&kp TAB               &kp A  &kp S  &kp D     &kp F        &kp G                               &mmv MOVE_LEFT  &mouse_and_off 0 LCLK  &mmv MOVE_RIGHT  &kp H                  &kp J        &kp K         &kp L       &kp SEMICOLON  &kp SQT
+&kp LEFT_COMMAND      &kp Z  &kp X  &kp C     &kp V        &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                          &kp N                  &kp M        &kp COMMA     &kp PERIOD  &kp SLASH      &kp DELETE
+                                    &ctrl_pd  &lt 2 LC(A)  &mt LEFT_SHIFT ENTER                                                                        &mt RIGHT_SHIFT SPACE  &lt 3 LC(E)  &caps_ichigo
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -151,10 +151,10 @@
         SYMBOL {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE        &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                              &msc SCRL_UP                     &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp BSPC
-&kp PRINTSCREEN  &kp LA(F4)     &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &msc SCRL_LEFT  &mkp RCLK       &msc SCRL_RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &tog 3
-&kp LC(LA(DEL))  &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE                    &msc SCRL_DOWN                   &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp PG_DN
-                                              &trans        &trans        &trans                                                                               &trans                 &trans     &tog 3
+&kp GRAVE       &kp N1         &kp N2        &kp N3        &kp N4        &kp N5                                              &msc SCRL_UP                     &kp N6                 &kp N7     &kp N8          &kp N9     &kp N0         &kp LA(BSPC)
+&kp LG(LS(N5))  &kp LG(A)      &none         &none         &kp MINUS     &kp LEFT_PARENTHESIS                &msc SCRL_LEFT  &mkp RCLK       &msc SCRL_RIGHT  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp UP          &none      &none          &kp LG(BACKSPACE)
+&kp LC(LG(Q))   &kp LC(LS(Y))  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT_BRACKET      &kp C_MUTE                    &msc SCRL_DOWN                   &kp RIGHT_BRACKET      &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &kp BACKSLASH  &kp LA(DEL)
+                                             &trans        &trans        &trans                                                                               &trans                 &trans     &tog 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DEC>;
@@ -164,10 +164,10 @@
         NUMPAD {
             display-name = "FN_NUMPAD";
             bindings = <
-&tog 4  &kp EXCL  &kp F1  &kp F2   &kp F3   &kp F4                       &kp UP_ARROW             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
-&trans  &none     &kp F5  &kp F6   &kp F7   &kp F8             &kp LEFT  &kp ENTER     &kp RIGHT  &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &trans
-&trans  &none     &kp F9  &kp F10  &kp F11  &kp F12  &trans              &kp DOWN                 &kp COMMA     &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
-                          &trans   &trans   &trans                                                &trans        &trans        &trans
+&tog 4  &kp EXCL  &kp F1  &kp F2   &kp F3   &kp F4                             &kp UP_ARROW             &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS   &kp BSPC
+&trans  &none     &kp F5  &kp F6   &kp F7   &kp F8                   &kp LEFT  &kp ENTER     &kp RIGHT  &kp PERIOD    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &trans
+&trans  &none     &kp F9  &kp F10  &kp F11  &kp F12        &trans              &kp DOWN                 &kp COMMA     &kp N7        &kp N8        &kp N9        &kp EQUAL  &kp DELETE
+                          &trans   &trans   &kp LA(ENTER)                                               &trans        &trans        &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
