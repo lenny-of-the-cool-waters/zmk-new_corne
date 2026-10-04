@@ -139,7 +139,7 @@
         MAC {
             bindings = <
 &escape_close_window  &kp Q  &kp W  &kp E     &kp R        &kp T                                               &mmv MOVE_UP                            &kp Y                  &kp U        &kp I         &kp O       &kp P          &kp BACKSPACE
-&kp TAB               &kp A  &kp S  &kp D     &kp F        &kp G                               &mmv MOVE_LEFT  &mouse_and_off 0 LCLK  &mmv MOVE_RIGHT  &kp H                  &kp J        &kp K         &kp L       &kp SEMICOLON  &kp SQT
+&mt LEFT_ALT TAB      &kp A  &kp S  &kp D     &kp F        &kp G                               &mmv MOVE_LEFT  &mouse_and_off 0 LCLK  &mmv MOVE_RIGHT  &kp H                  &kp J        &kp K         &kp L       &kp SEMICOLON  &kp SQT
 &kp LEFT_COMMAND      &kp Z  &kp X  &kp C     &kp V        &kp B                 &kp C_MUTE                    &mmv MOVE_DOWN                          &kp N                  &kp M        &kp COMMA     &kp PERIOD  &kp SLASH      &kp DELETE
                                     &ctrl_pd  &lt 2 LC(A)  &mt LEFT_SHIFT ENTER                                                                        &mt RIGHT_SHIFT SPACE  &lt 3 LC(E)  &caps_ichigo
             >;
